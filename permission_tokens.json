@@ -1,0 +1,35 @@
+[
+  {
+    "id": "072d719a-fc26-4a3a-914c-315dcc1c2fd7",
+    "token_hash": "2098bbf0bd1c23b79f94476cc437a155dba3291642a34a42356de334ff2c8f27",
+    "student_id": null,
+    "date": "2026-06-16",
+    "created_at": "2026-06-16T11:49:34",
+    "expires_at": "2026-06-16T11:59:34",
+    "single_use": true,
+    "used": true,
+    "admin": "pin-admin"
+  },
+  {
+    "id": "a3132149-697e-4827-b994-be08a4813691",
+    "token_hash": "6912b55836584739e6778c12f29c5f694cea85340e6bdba8fd61ddc3d77c0bd4",
+    "student_id": null,
+    "date": "2026-07-14",
+    "created_at": "2026-07-14T10:15:08",
+    "expires_at": "2026-07-14T10:25:08",
+    "single_use": false,
+    "used": false,
+    "admin": "pin-admin"
+  },
+  {
+    "id": "d34163c9-323e-4616-9d21-52b59848237b",
+    "token_hash": "62cf8451012a8d68eba9ea5ded1a15e5473d342e0fd82b5d6cfc6b5e9c534eb4",
+    "student_id": null,
+    "date": "2026-07-14",
+    "created_at": "2026-07-14T10:15:16",
+    "expires_at": "2026-07-14T11:55:16",
+    "single_use": false,
+    "used": false,
+    "admin": "pin-admin"
+  }
+]

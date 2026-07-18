@@ -1,0 +1,65 @@
+172.20.10.2 - - [13/Jun/2026 05:27:57] "GET /api/live_status HTTP/1.1" 200 -
+172.20.10.2 - - [13/Jun/2026 05:27:57] "GET /dashboard HTTP/1.1" 200 -
+DEBUG resource_dir=/home/nimet/Projects/resource
+DEBUG full_path=/home/nimet/Projects/resource/css/fonts.css
+DEBUG abspaths: rd=/home/nimet/Projects/resource, fp=/home/nimet/Projects/resource/css/fonts.css
+DEBUG common1=/home/nimet/Projects/resource
+DEBUG common2=/home/nimet/Projects/resource
+172.20.10.2 - - [13/Jun/2026 05:27:57] "GET /resource/css/fonts.css HTTP/1.1" 200 -
+DEBUG resource_dir=/home/nimet/Projects/resource
+DEBUG full_path=/home/nimet/Projects/resource/js/chart.min.js
+DEBUG abspaths: rd=/home/nimet/Projects/resource, fp=/home/nimet/Projects/resource/js/chart.min.js
+DEBUG common1=/home/nimet/Projects/resource
+DEBUG common2=/home/nimet/Projects/resource
+172.20.10.2 - - [13/Jun/2026 05:27:57] "GET /resource/js/chart.min.js HTTP/1.1" 200 -
+DEBUG resource_dir=/home/nimet/Projects/resource
+DEBUG full_path=/home/nimet/Projects/resource/icons/home.svg
+DEBUG abspaths: rd=/home/nimet/Projects/resource, fp=/home/nimet/Projects/resource/icons/home.svg
+DEBUG common1=/home/nimet/Projects/resource
+DEBUG common2=/home/nimet/Projects/resource
+172.20.10.2 - - [13/Jun/2026 05:27:57] "GET /resource/icons/home.svg HTTP/1.1" 200 -
+DEBUG resource_dir=/home/nimet/Projects/resource
+DEBUG resource_dir=/home/nimet/Projects/resource
+DEBUG full_path=/home/nimet/Projects/resource/icons/plus.svg
+DEBUG abspaths: rd=/home/nimet/Projects/resource, fp=/home/nimet/Projects/resource/icons/plus.svg
+DEBUG full_path=/home/nimet/Projects/resource/icons/computer.svg
+DEBUG resource_dir=/home/nimet/Projects/resource
+DEBUG full_path=/home/nimet/Projects/resource/icons/apps.svg
+DEBUG abspaths: rd=/home/nimet/Projects/resource, fp=/home/nimet/Projects/resource/icons/apps.svg
+DEBUG common1=/home/nimet/Projects/resource
+DEBUG common2=/home/nimet/Projects/resource
+172.20.10.2 - - [13/Jun/2026 05:27:57] "GET /resource/icons/apps.svg HTTP/1.1" 200 -
+DEBUG resource_dir=/home/nimet/Projects/resource
+DEBUG common1=/home/nimet/Projects/resource
+DEBUG abspaths: rd=/home/nimet/Projects/resource, fp=/home/nimet/Projects/resource/icons/computer.svg
+DEBUG common1=/home/nimet/Projects/resource
+DEBUG common2=/home/nimet/Projects/resource
+DEBUG full_path=/home/nimet/Projects/resource/icons/menu-burger.svg
+DEBUG common2=/home/nimet/Projects/resource
+172.20.10.2 - - [13/Jun/2026 05:27:57] "GET /resource/icons/computer.svg HTTP/1.1" 200 -
+DEBUG abspaths: rd=/home/nimet/Projects/resource, fp=/home/nimet/Projects/resource/icons/menu-burger.svg
+DEBUG common1=/home/nimet/Projects/resource
+DEBUG common2=/home/nimet/Projects/resource
+172.20.10.2 - - [13/Jun/2026 05:27:57] "GET /resource/icons/menu-burger.svg HTTP/1.1" 200 -
+DEBUG resource_dir=/home/nimet/Projects/resource
+DEBUG full_path=/home/nimet/Projects/resource/icons/dashboard-monitor.svg
+172.20.10.2 - - [13/Jun/2026 05:27:57] "GET /resource/icons/plus.svg HTTP/1.1" 200 -
+DEBUG abspaths: rd=/home/nimet/Projects/resource, fp=/home/nimet/Projects/resource/icons/dashboard-monitor.svg
+DEBUG common1=/home/nimet/Projects/resource
+DEBUG common2=/home/nimet/Projects/resource
+DEBUG resource_dir=/home/nimet/Projects/resource
+DEBUG full_path=/home/nimet/Projects/resource/icons/id-card-clip-alt.svg
+DEBUG abspaths: rd=/home/nimet/Projects/resource, fp=/home/nimet/Projects/resource/icons/id-card-clip-alt.svg
+DEBUG common1=/home/nimet/Projects/resource
+DEBUG common2=/home/nimet/Projects/resource
+DEBUG resource_dir=/home/nimet/Projects/resource
+DEBUG full_path=/home/nimet/Projects/resource/icons/shield-lock.svg
+DEBUG abspaths: rd=/home/nimet/Projects/resource, fp=/home/nimet/Projects/resource/icons/shield-lock.svg
+DEBUG common1=/home/nimet/Projects/resource
+172.20.10.2 - - [13/Jun/2026 05:27:57] "GET /resource/icons/dashboard-monitor.svg HTTP/1.1" 200 -
+DEBUG common2=/home/nimet/Projects/resource
+172.20.10.2 - - [13/Jun/2026 05:27:57] "GET /resource/icons/shield-lock.svg HTTP/1.1" 200 -
+172.20.10.2 - - [13/Jun/2026 05:27:57] "GET /resource/icons/id-card-clip-alt.svg HTTP/1.1" 200 -
+172.20.10.2 - - [13/Jun/2026 05:27:58] "GET /api/live_status HTTP/1.1" 200 -
+172.20.10.2 - - [13/Jun/2026 05:27:59] "GET /api/live_status HTTP/1.1" 200 -
+172.20.10.2 - - [13/Jun

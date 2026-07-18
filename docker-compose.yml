@@ -1,0 +1,94 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: school_postgres
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-school_platform}
+      POSTGRES_USER: ${POSTGRES_USER:-app}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD in .env}
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./db/init.sql:/docker-entrypoint-initdb.d/01-init.sql:ro
+    healthcheck:
+      test: ['CMD-SHELL', 'pg_isready -U ${POSTGRES_USER:-app} -d ${POSTGRES_DB:-school_platform}']
+    ports:
+      - "5432:5432"
+      # interval: 5s
+      # timeout: 5s
+      # retries: 10
+    restart: always
+
+  attendance-system:
+    build: .
+    container_name: nfc_attendance
+    environment:
+      NFC_PORT: ${NFC_PORT:-8080}
+      PRODUCTION: ${PRODUCTION:-1}
+      DISABLE_MDNS: ${DISABLE_MDNS:-1}
+      ADMIN_PIN: ${ADMIN_PIN:?Set ADMIN_PIN in .env}
+      ESP32_API_KEY: ${ESP32_API_KEY:-}
+      PUBLIC_SERVER_URL: ${PUBLIC_SERVER_URL:-}
+      GEMINI_API_URL: ${GEMINI_API_URL:-https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent}
+      GEMINI_API_KEY: ${GEMINI_API_KEY:-}
+      DATABASE_URL: postgresql://${POSTGRES_USER:-app}:${POSTGRES_PASSWORD}@postgres:5432/${POSTGRES_DB:-school_platform}
+    volumes:
+      - ./students.json:/app/students.json
+      - ./attendance_log.csv:/app/attendance_log.csv
+      - ./photos:/app/photos
+      - ./notes:/app/notes
+      - ./id_counters.json:/app/id_counters.json
+      - ./admin_keys.json:/app/admin_keys.json
+      - ./permission_tokens.json:/app/permission_tokens.json
+      - ./attendance_audit.csv:/app/attendance_audit.csv
+    depends_on:
+      postgres:
+        condition: service_healthy
+    expose:
+      - '8080'
+    ports:
+      - '8080:8080'
+    restart: always
+
+  typebattle:
+    build: ./typebattle
+    container_name: typebattle
+    environment:
+      PORT: 3000
+      DATABASE_URL: postgresql://${POSTGRES_USER:-app}:${POSTGRES_PASSWORD}@postgres:5432/${POSTGRES_DB:-school_platform}
+      SESSION_SECRET: ${SESSION_SECRET:-change_me_in_production}
+      STUDENTS_JSON_PATH: /app/students.json
+      PHOTOS_DIR: /app/photos
+    volumes:
+      - ./students.json:/app/students.json:ro
+      - ./photos:/app/photos:ro
+    depends_on:
+      postgres:
+        condition: service_healthy
+    expose:
+      - '3000'
+    ports:
+      - '3000:3000'
+    restart: always
+
+  caddy:
+    image: caddy:2-alpine
+    container_name: school_caddy
+    ports:
+      - '80:80'
+      - '443:443'
+    environment:
+      ATTENDANCE_HOST: ${ATTENDANCE_HOST:-attendance.localhost}
+      TYPEBATTLE_HOST: ${TYPEBATTLE_HOST:-type.localhost}
+    volumes:
+      - ./deploy/Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy_data:/data
+      - caddy_config:/config
+    depends_on:
+      - attendance-system
+      - typebattle
+    restart: always
+
+volumes:
+  pgdata:
+  caddy_data:
+  caddy_config:

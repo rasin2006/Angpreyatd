@@ -1,0 +1,6 @@
+Timestamp,Admin,StudentID,Date,Slot,OldValue,NewValue,Reason
+2026-06-16 11:49:34,pin-admin,,2026-06-16,token_generate,,,Generated permission token
+2026-06-16 11:50:26,pin-admin,APY5003-B4,2026-06-16,status,active,ARCHIVED,Student moved to archive
+2026-06-16 11:50:26,pin-admin,APY5003-B4,2026-06-16,profile_update,"{""name"": {""old"": ""\u178e\u1793 \u178e\u1799\u178e\u17b6"", ""new"": ""\u178e\u1793 \u178e\u1799\u178e\u17b6""}, ""dob"": {""old"": ""2009-09-03"", ""new"": ""2009-09-03""}, ""schedule"": {""old"": [""17:00-18:00 \u1785\u1793\u17d2\u1791 \u179f\u17bb\u1780\u17d2\u179a""], ""new"": [""17:00-18:00 \u1785\u1793\u17d2\u1791 \u179f\u17bb\u1780\u17d2\u179a""]}, ""desk_id"": {""old"": ""B4"", ""new"": ""B4"", ""class"": ""17:00-18:00 \u1785\u1793\u17d2\u1791 \u179f\u17bb\u1780\u17d2\u179a""}, ""archived"": {""old"": false, ""new"": true}}",SUCCESS,
+2026-07-14 10:15:08,pin-admin,,2026-07-14,token_generate,,,Generated permission token
+2026-07-14 10:15:16,pin-admin,,2026-07-14,token_generate,,,Generated permission token
